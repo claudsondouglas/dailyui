@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily UI #2</title>
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="//cdn.jsdelivr.net/npm/less" ></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>Compra</h1>
+    <h3>Falta bem pouco, informe alguns dados</h3>
+    <div class="progress">
+      <div class="progress-item is-active">Pedido</div>
+      <div class="progress-item is-active">Pagamento</div>
+      <div class="progress-item">Confirmação</div>
+    </div>
+    <section class="box">
+      <div class="payment-methods">
+        <div class="is-active">
+          <img src="assets/icons8-mastercard-logo.svg" alt="visa logo">
+        </div>
+        <div>
+          <img src="assets/icons8-paypal.svg" alt="paypal logo">
+        </div>
+      </div>
+    </section>
+    <section class="box">
+      <div class="form-item">
+        <label>Nome</label>
+        <input type="text" placeholder="Claudson Douglas">
+      </div>
+      <div class="form-item">
+        <label>Numero do cartão</label>
+        <input type="text" placeholder="XXXX-XXXX-XXXX-XXX">
+      </div>
+      <div class="card-form-number">
+        <div class="form-item">
+          <label>Data de expiração</label>
+          <input type="text" placeholder="MM-AAAA">
+        </div>
+        <div class="form-item">
+          <label>CVC</label>
+          <input type="text" placeholder="XXX">
+        </div>
+      </div>
+      <div class="form-item">
+        <button>prosseguir</button>
+      </div>
+      <div class="form-item" align="right">
+        <a href="">Cancelar e voltar ao inicio</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

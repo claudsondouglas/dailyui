@@ -1,0 +1,148 @@
+@color-primary: #73E2A7;
+
+body {
+  margin: 0;
+  background: #FAFAFF;
+  color: #333;
+  font-family: 'Ubuntu', arial;
+}
+
+main {
+  margin: 3rem 25%;
+  border-radius: .4rem;
+  background: white;
+  padding: 3rem;
+}
+
+.progress {
+  display: flex;
+  padding-top: 3rem;
+  margin: 0 -6rem;
+
+  &-item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    font-size: small;
+
+    &:after {
+      background: #eee;
+      content: ' ';
+      width: 1rem;
+      height: 1rem;
+      display: block;
+      position: absolute;
+      left: calc(50% - .5rem);
+      top: -1.4rem;
+      border-radius: 100%;
+      z-index: 1;
+    }
+    &:before {
+      background: #eee;
+      content: ' ';
+      width: calc(100% - .5rem);
+      height: .3rem;
+      display: block;
+      position: absolute;
+      right: calc(50% + .5rem);
+      top: -1rem;
+      z-index: 1;
+    }
+    &:first-child {
+      &:before {
+        display: none;
+        background: blue;
+      }
+    }
+
+    &.is-active {
+      color: darken(@color-primary, 25%);
+      
+      &:after, &:before {
+        z-index: 2;
+        background: @color-primary;
+      }
+    }
+  }
+}
+
+h1, h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+h3 {
+  color: #666;
+}
+.payment-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 3rem 0;
+
+  div {
+    flex: 1;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #eee 2px solid;
+    background: white;
+
+    &.is-active {
+      background: #f8f8FF;
+    }
+  }
+}
+.card-form-number {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 3rem;
+}
+.form-item {
+  margin: .8rem 0;
+  label {
+    display: block;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-size: small;
+    color: #666;
+  }
+  input {
+    text-transform: uppercase;
+    font-family: 'Ubuntu', arial;
+    box-sizing: border-box;
+    width: 100%;
+    padding: .8rem;
+    border: none;
+    border-bottom: 2px solid #eee;
+    &::placeholder {
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      outline: none;
+      background: #f8f8ff;
+    }
+  }
+
+  a {
+    color: darken(@color-primary, 25%);
+    text-decoration: none;
+    font-size: x-small;
+    text-transform: uppercase;
+  }
+
+  button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius:.3rem;
+    font-family: 'Ubuntu', arial;
+    background: @color-primary;
+    color: white;
+    font-weight: bold;
+  }
+}
